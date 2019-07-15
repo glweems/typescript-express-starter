@@ -1,17 +1,8 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-/* eslint-disable import/no-extraneous-dependencies */
 import * as Knex from 'knex';
-import * as Bookshelf from 'bookshelf';
-import * as MockKnex from 'mock-knex';
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const config = require('../knexfile');
 
 const env = process.env.NODE_ENV || 'development';
 
-export const knex = Knex(config[env]);
-
-if (env === 'test') {
-  MockKnex.mock(knex);
-}
-
-export default Bookshelf(knex);
+export default Knex(config[env]);

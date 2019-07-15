@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable func-names */
 /**
  * Module dependencies.
@@ -6,7 +7,6 @@ import * as express from 'express';
 import * as bodyParser from 'body-parser';
 import * as logger from 'morgan';
 import * as lusca from 'lusca';
-import { Err } from './interfaces';
 
 const debug = require('debug')('ts-express:app');
 

@@ -1,7 +1,7 @@
-import { Router } from 'express'
-const router = Router()
+import { Router } from 'express';
 
-router.use('/', require('./controllers/home'))
-router.use('/echo', require('./controllers/echo'))
+const router = Router();
 
-module.exports = router
+router.use('/', require('./controllers/home'));
+
+module.exports = router;
