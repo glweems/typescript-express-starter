@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable func-names */
 /**
  * Module dependencies.
@@ -25,17 +26,6 @@ const app = express();
 /**
  * Express configuration.
  */
-
-const isTest = process.env.NODE_ENV === 'test';
-app.use(
-  logger(process.env.LOG_LEVEL, {
-    skip: () => isTest
-  })
-);
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(lusca.xframe('SAMEORIGIN'));
-app.use(lusca.xssProtection(true));
 
 /**
  * routes.

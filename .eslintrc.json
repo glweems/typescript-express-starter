@@ -4,7 +4,7 @@
     "es6": true
   },
   "extends": [
-    "airbnb",
+    "airbnb-base",
     "plugin:@typescript-eslint/recommended",
     "plugin:import/typescript",
     "plugin:prettier/recommended",
@@ -19,6 +19,8 @@
     "sourceType": "module"
   },
   "rules": {
+    " @typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/explicit-member-accessibility": "off",
     "@typescript-eslint/explicit-function-return-type": "off"
   }
 }
