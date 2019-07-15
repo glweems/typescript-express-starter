@@ -10,7 +10,9 @@
     "serve": "cross-env DEBUG=ts-express:* nodemon bin/www",
     "build-ts": "tsc -p ./",
     "watch-ts": "tsc -w -p ./",
-    "migrate": "knex migrate:latest"
+    "migrate": "knex migrate:latest",
+    "lint": "eslint ./src/**/*.ts",
+    "lint:fix": "eslint ./src/**/*.ts --fix"
   },
   "repository": {
     "type": "git",
@@ -40,7 +42,6 @@
     "validatorjs": "^3.13.5"
   },
   "devDependencies": {
-    "@divyenduz/ts-graphql-plugin": "^0.1.0",
     "@types/body-parser": "^1.16.5",
     "@types/dotenv": "^6.1.1",
     "@types/express": "^4.0.37",
@@ -56,14 +57,12 @@
     "cross-env": "^5.0.5",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.1",
-    "eslint-config-airbnb-base": "^13.2.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.0",
     "nodemon": "^1.12.1",
     "prettier": "^1.18.2",
-    "tsconfig-paths": "^3.8.0",
     "typescript": "^3.5.3"
   }
 }
